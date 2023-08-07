@@ -17,6 +17,9 @@
 .company{
     font-size: xxx-large;
     font-weight: bolder;
+    animation-name: slide;
+    animation-duration: 2.5s;
+    animation-delay: 0.75s;
 }
 .links{
     display: flex;
@@ -80,6 +83,9 @@ color: rgb(60, 9, 1);
     font-weight: bolder;
     /* color: rgb(215, 250, 134); */
     color: rgb(255, 255, 255);
+    animation-name: travel ;
+    animation-duration: 1.5s;
+    animation-delay: 0.75s;
 }
 
 .booking{
@@ -127,6 +133,11 @@ color: rgb(60, 9, 1);
     padding:50px;
     background:linear-gradient(rgba(145, 232, 240, 0.66),rgb(19, 159, 157));
 }
+/* .about p , .about li{
+    animation-name: travel;
+    animation-duration: 1s;
+    animation-delay: 5.75s;
+} */
 .reviews {
     display: flex;
     flex-direction: row;
@@ -147,8 +158,16 @@ color: rgb(60, 9, 1);
     display: inline-block;
     max-width: 250px;
 }
+/* .remark img{
+    animation-name: travel ;
+    animation-duration: 1s;
+    animation-delay: 7.75s;
+} */
 .remark p{
     padding: 10px;
+    /* animation-name: slide;
+    animation-duration: 1s;
+    animation-delay: 0.75s; */
 }
 .names{
     font-size: larger;
@@ -175,6 +194,24 @@ color: rgb(60, 9, 1);
   text-decoration: none;
   color: blanchedalmond;
   }
+  @keyframes travel{
+    from{
+        transform: translateY(400px);
+        scale: 3;
+    }
+    to{
+        transform: translateY(0px);
+        scale: 1;
+    }
+}
+  @keyframes slide{
+    from{
+        transform: translateX(200px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
 @media only screen and ( max-width:600px ){
     .intro{
         background-size:100vw 70vh;
